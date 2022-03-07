@@ -1,0 +1,184 @@
+@mixin displayFlex($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+$mainColor: #e74c3c;
+$mainColorFont: white;
+
+header {
+    transition: 0.5s;
+    .header_bg {
+        position: fixed;
+        background: rgba(255, 255, 255, 0.7);
+        height: 100vh;
+        width: 100vw;
+        z-index: 98;
+        pointer-events: all;
+        transition: 0.5s;
+    }
+    .header_section {
+        @include displayFlex(column);
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 500px;
+        width: 500px;
+        background: $mainColor;
+        color: $mainColorFont;
+        border: 16px solid white;
+        border-radius: 50%;
+        z-index: 99;
+        overflow: hidden;
+        transition: 0.5s, height 0.5s 0.5s, width 0.5s 0.5s;
+        padding: 50px;
+        .header_section_content {
+            @include displayFlex(column);
+            opacity: 1;
+            pointer-events: all;
+            transition: opacity 0.5s 0.5s;
+            input[type="button"] {
+                padding: 10px 28px;
+                color: $mainColor;
+                background: $mainColorFont;
+                border: none;
+                border-radius: 30px;
+            }
+        }
+        .header_section_icon {
+            display: none;
+            transition: 0.5s;
+        }
+    }
+}
+
+header.headerSmall {
+    .header_bg {
+        background: rgba(255, 255, 255, 0);
+        pointer-events: none;
+    }
+    .header_section {
+        height: 130px;
+        width: 130px;
+        top: 0%;
+        transition: 0.5s, top 0.5s 0.5s;
+        .header_section_content {
+            opacity: 0;
+            height: 0;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+        .header_section_icon {
+            @include displayFlex();
+            font-size: 25px;
+            top: -50px;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            transform: 0.5s;
+            i {
+                transform: translateY(20px);
+            }
+        }
+    }
+}
+
+main {
+    .main_section {
+        padding: 5px;
+    }
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+    .col-12,
+    .col-md-6 {
+        margin: 0;
+        padding: 0;
+    }
+    .imgBox {
+        width: 100%;
+        padding: 5px;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding: 32px;
+    background: $mainColor;
+    color: $mainColorFont;
+    box-sizing: border-box;
+    width: 100vw;
+    transform: translateY(100%);
+    transition: 0.5s;
+    z-index: 97;
+    .footerShower {
+        @include displayFlex();
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        height: 60px;
+        width: 60px;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        background: $mainColor;
+        color: $mainColorFont;
+        cursor: pointer;
+        i {
+            transform: translateY(-6px);
+            font-size: 25px;
+        }
+    }
+    .footer_section {
+        @include displayFlex(row, flex-start, flex-start);
+        width: 100%;
+        .inf {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .follow {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            .icon {
+                font-size: 25px;
+                i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (orientation: portrait) {
+    main {
+        margin: 10px !important;
+        margin-top: 80px !important;
+    }
+    footer {
+        position: relative !important;
+        transform: translateY(0%) !important;
+        .footer_section {
+            flex-direction: column !important;
+            .inf,
+            .follow {
+                width: 100%;
+            }
+        }
+        .footerShower {
+            display: none;
+        }
+    }
+}

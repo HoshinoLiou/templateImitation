@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template06</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="bg bg01">
+            <div class="messageBx">
+                <h1>This is Road Trip</h1>
+            </div>
+        </div>
+        <div class="bg bg02">
+            <div class="messageBx">
+                <div class="message">
+                    <h4>NIBH NON LOBORTIS MUS NIBH</h4>
+                    <h5>01.01.2021</h5>
+                    <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                        platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate
+                        a
+                        duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                        blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                        tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg bg03">
+            <div class="messageBx">
+                <div class="message">
+                    <h4>MUS ELIT A ULTRICIES AT</h4>
+                    <h5>01.01.2020</h5>
+                    <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                        platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate
+                        a
+                        duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                        blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                        tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg bg04">
+            <div class="messageBx">
+                <div class="message">
+                    <h4>VARIUS A CURSUS ALIQUET</h4>
+                    <h5>11.11.2019</h5>
+                    <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                        platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate
+                        a
+                        duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                        blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                        tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg bg05">
+            <div class="messageBx">
+                <div class="message">
+                    <h4>LUCTUS BLANDIT MI LECTUS IN NASCETUR</h4>
+                    <h5>01.01.2019</h5>
+                    <p>Scelerisque enim mi curae erat ultricies lobortis donec velit in per cum consectetur purus a enim
+                        platea vestibulum lacinia et elit ante scelerisque vestibulum. At urna condimentum sed vulputate
+                        a
+                        duis in senectus ullamcorper lacus cubilia consectetur odio proin sociosqu a parturient nam ac
+                        blandit praesent aptent. Eros dignissim mus mauris a natoque ad suspendisse nulla a urna in
+                        tincidunt tristique enim arcu litora scelerisque eros suspendisse.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="connactMe col-12">
+                        <h5>CONTACT ME</h5>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <p>Name</p>
+                                    <input type="text">
+                                </div>
+                                <div class="col-lg-6">
+                                    <p>Email</p>
+                                    <input type="text">
+                                </div>
+                                <div class="col-12">
+                                    <p>Message</p>
+                                    <textarea rows="10">
+                                    </textarea>
+                                </div>
+                                <div class="col-12">
+                                    <input type="button" value="Send Message">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footTitle col-12">
+                        © Untitled Design: TEMPLATED. Images: Unsplash.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        window.addEventListener("scroll", function (e) {
+            let value = window.scrollY;
+            console.log(value);
+            let message = document.getElementsByClassName('message');
+            if (value >= 550) {
+                message[0].style.opacity = "1"
+            }
+            else{
+                message[0].style.opacity = "0"
+            }
+            if (value >= 1450) {
+                message[1].style.opacity = "1"
+            }
+            else{
+                message[1].style.opacity = "0"
+            }
+            if (value >= 2150) {
+                message[2].style.opacity = "1"
+            }
+            else{
+                message[2].style.opacity = "0"
+            }
+            if (value >= 2850) {
+                message[3].style.opacity = "1"
+            }
+            else{
+                message[3].style.opacity = "0"
+            }
+        })
+    </script>
+
+</body>
+
+</html>

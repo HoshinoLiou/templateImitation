@@ -1,0 +1,139 @@
+@mixin displayFlex($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: url("./image/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+header {
+    @include displayFlex();
+    .header_section {
+        @include displayFlex(column);
+        padding: 60px;
+        color: white;
+        text-align: center;
+    }
+}
+
+main {
+    .slogan {
+        .slogan_pic {
+            padding: 0;
+            width: 100%;
+            background: red;
+            img {
+                width: 100%;
+            }
+        }
+        .slogan_title {
+            width: 100%;
+            background: white;
+            padding: 48px 32px;
+            text-align: center;
+        }
+        .slogan_content {
+            width: 100%;
+            background: #f4f4f4;
+            padding: 50px;
+        }
+    }
+    .picBox {
+        .container {
+            padding: 60px;
+            background: #1e1f23;
+        }
+        .picBox_title {
+            @include displayFlex(column);
+            color: white;
+            padding: 30px;
+            background: black;
+        }
+        .picBox_pic {
+            padding: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    .introduction {
+        .introduction_box {
+            .box_img {
+                padding: 0;
+                img {
+                    width: 100%;
+                }
+            }
+            .box_content {
+                @include displayFlex(column, center, flex-start);
+                background: white;
+                padding: 60px;
+                text-align: left;
+            }
+            &:nth-child(2) {
+                .box_content {
+                    @include displayFlex(column, center, flex-end);
+                    background: #1e1f23;
+                    color: white;
+                    text-align: right;
+                }
+                .box_img:nth-child(1) {
+                    display: none;
+                }
+                .box_img:nth-child(3) {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    padding:60px;
+    .othersIcon {
+        @include displayFlex();
+        width: 100%;
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom:30px;
+        i{
+            font-size:30px;
+            margin:0px 15px;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover{
+                color:white;
+            }
+        }
+    }
+    .untitled {
+        @include displayFlex();
+        width: 100%;
+        color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (max-width: 992px) {
+    .introduction_box {
+        .box_content {
+            align-items: center !important;
+            text-align: center !important;
+        }
+        &:nth-child(2) {
+            .box_img:nth-child(1) {
+                display: block !important;
+            }
+            .box_img:nth-child(3) {
+                display: none !important;
+            }
+        }
+    }
+}

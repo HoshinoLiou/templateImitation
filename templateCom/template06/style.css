@@ -1,0 +1,77 @@
+.bg {
+  position: relative;
+  height: 100vh;
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important; }
+  .bg .messageBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35); }
+    .bg .messageBx .message {
+      opacity: 0;
+      transition: 0.5s;
+      text-align: center;
+      padding: 60px;
+      box-sizing: border-box;
+      background: rgba(0, 0, 0, 0.7);
+      width: 80%;
+      max-width: 800px; }
+      .bg .messageBx .message h5 {
+        color: rgba(255, 255, 255, 0.5);
+        margin-bottom: 30px; }
+
+.bg01 {
+  background: url("./image/banner.jpg"); }
+
+.bg02 {
+  background: url("./image/banner2.jpg"); }
+
+.bg03 {
+  background: url("./image/banner5.jpg"); }
+
+.bg04 {
+  background: url("./image/banner4.jpg"); }
+
+.bg05 {
+  background: url("./image/banner3.jpg"); }
+
+footer .connactMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: black;
+  color: white; }
+  footer .connactMe h5 {
+    padding-bottom: 15px; }
+  footer .connactMe p {
+    padding: 20px 0 10px;
+    margin: 0; }
+  footer .connactMe input[type="text"] {
+    width: 100%; }
+  footer .connactMe textarea {
+    width: 100%; }
+  footer .connactMe input[type="button"] {
+    border: none;
+    border-radius: 3px;
+    padding: 10px 40px;
+    color: white;
+    margin-top: 20px;
+    background: none;
+    border: 2px solid white; }
+footer .footTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background: orangered;
+  font-size: 12px;
+  color: white; }
+
+/*# sourceMappingURL=style.css.map */

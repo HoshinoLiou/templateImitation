@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap");
+* {
+  font-family: "Source Sans Pro", sans-serif; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #242424;
+  height: 100vh;
+  width: 100%; }
+  header .header_section {
+    text-align: center;
+    color: white;
+    width: 70%; }
+    header .header_section h1 {
+      font-size: 5em;
+      line-height: 1.3em; }
+    header .header_section p {
+      font-size: 20px;
+      line-height: 1.3em;
+      color: #ffffffbf; }
+
+main {
+  background: #202024; }
+  main .squareBx {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; }
+    main .squareBx .square {
+      width: 30%;
+      margin: 1.5%;
+      background: #2c2c32;
+      border-radius: 5px;
+      overflow: hidden; }
+      main .squareBx .square .square_img {
+        width: 100%; }
+        main .squareBx .square .square_img img {
+          width: 100%; }
+      main .squareBx .square .square_content {
+        text-align: center;
+        padding: 1.5em; }
+        main .squareBx .square .square_content h1 {
+          color: #ffffff;
+          font-size: 1.35em;
+          margin: 0 0 1em 0; }
+        main .squareBx .square .square_content p {
+          color: #ffffffbf;
+          font-size: 16px;
+          margin: 0 0 2em 0;
+          line-height: 1.3em; }
+        main .squareBx .square .square_content input[type="button"] {
+          width: 100%;
+          padding: 16px;
+          border-radius: 5px;
+          border: none;
+          color: white;
+          cursor: pointer;
+          transition: 0.2s; }
+          main .squareBx .square .square_content input[type="button"]:hover {
+            filter: brightness(120%); }
+        main .squareBx .square .square_content .buttonColor0 {
+          background: #70c7be; }
+        main .squareBx .square .square_content .buttonColor1 {
+          background: #9d7ed0; }
+        main .squareBx .square .square_content .buttonColor2 {
+          background: #7f92cf; }
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: #1b1b1f; }
+  footer .footer_section {
+    padding: 4em 0 2em;
+    text-align: center;
+    width: 50%; }
+    footer .footer_section h1 {
+      color: #ffffff;
+      font-size: 1.75em;
+      margin: 0 0 1em; }
+    footer .footer_section p {
+      color: #ffffffbf;
+      font-size: 1em;
+      margin: 0 0 2em; }
+    footer .footer_section .section_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      footer .footer_section .section_icon p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 24px;
+        border: 2px solid #ffffffbf;
+        width: 1.8em;
+        height: 1.8em;
+        border-radius: 50%;
+        margin: 0 0.5em 1em; }
+
+@media (orientation: portrait), (max-width: 1281px) {
+  .square {
+    width: 45% !important;
+    margin: 2.5% !important; } }
+@media (orientation: portrait), (max-width: 737px) {
+  .square {
+    width: 90% !important;
+    margin: 5% !important; } }
+
+/*# sourceMappingURL=style.css.map */

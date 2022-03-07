@@ -1,0 +1,141 @@
+@mixin displayFlex($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+nav {
+    @include displayFlex(column, flex-start);
+    position: fixed;
+    height: 100vh;
+    width: 55px;
+    background: #22313f;
+    color: #86898b;
+    font-size: 23px;
+    i {
+        margin: 20px 0;
+    }
+}
+
+.bg {
+    position: fixed;
+    background: url("./image/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+}
+
+#page {
+    padding-left: 55px;
+    header {
+        .slogan {
+            @include displayFlex(column);
+            padding: 80px;
+            color: white;
+            input[type="button"] {
+                color: white;
+                background: none;
+                border: 2px solid rgba(255, 255, 255, 0.5);
+                border-radius: 3px;
+                padding: 10px 40px;
+            }
+        }
+    }
+    main {
+        .whatNew {
+            background: #f1f1f1;
+            padding: 50px 0;
+            .whatNew_title {
+                @include displayFlex();
+                padding: 60px 0 30px;
+                width: 100%;
+            }
+            .whatNew_pic {
+                @include displayFlex();
+                margin: 0;
+                padding: 0;
+                height: 230px;
+                overflow: hidden;
+                cursor: pointer;
+                img {
+                    position: absolute;
+                    vertical-align: middle;
+                    height: 100%;
+                    transition: 0.3s;
+                }
+                &:hover img {
+                    height: 110%;
+                }
+            }
+            .whatNew_button {
+                @include displayFlex();
+                padding-top: 30px;
+                input[type="button"] {
+                    border: none;
+                    border-radius: 3px;
+                    padding: 10px 40px;
+                    color: white;
+                    background: #19b5fe;
+                }
+            }
+        }
+    }
+    footer {
+        .aboutMe {
+            padding: 50px;
+            background: #e6e6e6;
+            h5,
+            p {
+                padding-bottom: 15px;
+            }
+            i{
+                font-size:25px;
+                margin-right:15px;
+                color: #19b5fe;
+            }
+        }
+        .connactMe {
+            padding: 50px;
+            background: #ececec;
+            h5 {
+                padding-bottom: 15px;
+            }
+            p{
+                padding:20px 0 10px;
+                margin:0;
+            }
+            input[type="text"]{
+                width:100%;
+            }
+            textarea{
+                width:100%;
+            }
+            input[type="button"] {
+                border: none;
+                border-radius: 3px;
+                padding: 10px 40px;
+                color: white;
+                background: #19b5fe;
+                margin-top:20px;
+            }
+        }
+        .footTitle{
+            @include displayFlex();
+            padding:50px;
+            background:#f1f1f1;
+            font-size: 12px;
+        }
+    }
+}

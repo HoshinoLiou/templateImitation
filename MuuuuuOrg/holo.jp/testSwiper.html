@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>holo.jp</title>
+
+    <link rel="stylesheet" href="styles/swiperStyle.css">
+
+    <!-- swiperjs -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <img class="mask" src="images/L1020156_1100x.jpg" alt="">
+    <img class="mask" src="images/2109151499_1100x.jpg" alt="">
+    <img class="mask" src="images/holo_top_product03_1100x.png" alt="">
+
+
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <ul class="swiper-wrapper">
+            <!-- Slides -->
+            <li class="swiper-slide swiper-slide-visible square">
+                <img class="mask" src="images/L1020156_1100x.jpg" alt="">
+            </li>
+            <li class="swiper-slide swiper-slide-visible square">
+                <img class="mask" src="images/2109151499_1100x.jpg" alt="">
+            </li>
+            <li class="swiper-slide swiper-slide-visible square">
+                <img class="mask" src="images/holo_top_product03_1100x.png" alt="">
+            </li>
+        </ul>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+
+
+    <!-- swiperjs -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal', //* 'horizontal' | 'vertical'
+            edgeSwipeDetection: false, //* 'prevent' | false
+            edgeSwipeThreshold: 0,
+            effect: 'slide', //* 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards'
+            enabled: true,
+            focusableElements: '', //*'input, select, option, textarea, button, video, label'
+            followFinger: true,
+            loop: true,
+            touchEventsTarget: 'wrapper', //*'container' | 'wrapper'
+
+            speed: 400,
+            spaceBetween: 100,
+            allowSlideNext: true,
+            allowSlidePrev: true,
+            allowTouchMove: true,
+            autoHeight: false,
+            // breakpoints: {
+            //     // when window width is >= 320px
+            //     320: {
+            //         slidesPerView: 2,
+            //         spaceBetween: 20
+            //     },
+            //     // when window width is >= 480px
+            //     480: {
+            //         slidesPerView: 3,
+            //         spaceBetween: 30
+            //     },
+            //     // when window width is >= 640px
+            //     640: {
+            //         slidesPerView: 4,
+            //         spaceBetween: 40
+            //     }
+            // }
+            centerInsufficientSlides: false,
+            centeredSlides: false,
+            centeredSlidesBounds: true,
+
+            //* 分頁器
+            // pagination: {
+            //     el: '.swiper-pagination',
+            // },
+        });
+
+        // const swiper2 = document.querySelector('.swiper').swiper;
+        // swiper2.slideNext();
+
+    </script>
+</body>
+
+</html>

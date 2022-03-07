@@ -1,0 +1,256 @@
+@mixin displayFlex($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+input[type="button"] {
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+
+.navHeader {
+    @include displayFlex(row, space-between, center);
+    position: absolute;
+    width: 100%;
+    //background: #212529;
+    height: 45px;
+    z-index: 98;
+    transition: 0.5s;
+    .nav {
+        @include displayFlex(row, space-between, center);
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+        .logo {
+            color: #ffffff;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .listBurget {
+            text-align: right;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            font-weight: 600;
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.navList {
+    position: fixed;
+    right: 0;
+    background: #212529;
+    height: 100vh;
+    width: 0%;
+    z-index: 99;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.7);
+    .navList_close {
+        text-align: right;
+        padding: 15px 30px;
+        i {
+            &:hover {
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
+    ul {
+        padding: 80px 35px;
+        li {
+            padding: 10px 0;
+            transition: 0.3s;
+            &:hover {
+                cursor: pointer;
+                color: white;
+            }
+        }
+    }
+}
+
+header {
+    section {
+        @include displayFlex();
+        height: 100vh;
+        width: 100%;
+    }
+    .bg {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: url("./image/banner.jpg");
+        background-size: cover;
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    }
+    .slogan {
+        @include displayFlex(column);
+        width: 100%;
+        text-align: center;
+        color: white;
+        .slogan_inner {
+            width: 90%;
+            max-width: 500px;
+        }
+    }
+}
+
+main {
+    .userInf {
+        padding: 60px 80px;
+        background: white;
+        .avatar {
+            @include displayFlex();
+            margin: 20px 0 50px;
+            .avatar_inner {
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                height: 300px;
+                width: 100%;
+                max-width: 300px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                    padding:7px;
+                    box-sizing: border-box;
+                }
+            }
+        }
+        .message {
+            padding:0 25px;
+            h4 {
+                margin-bottom: 30px;
+            }
+            p {
+                color: rgba(0, 0, 0, 0.5);
+                margin-bottom: 30px;
+            }
+        }
+        &:nth-child(2) {
+            background: #3498db;
+            color: white;
+            .avatar_inner {
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            .message {
+                p {
+                    color: rgba(255, 255, 255, 0.6);
+                    margin-bottom: 30px;
+                }
+                input[type="button"] {
+                    background: white;
+                    color: #3498db;
+                }
+                &:nth-child(1) {
+                    display: block;
+                }
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .videoBox{
+        background: #fafafa;
+        .title{
+            @include displayFlex(column);
+            padding:80px;
+        }
+        .imgBx{
+            padding:60px;
+            text-align: center;
+            .img{
+                @include displayFlex();
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                border-radius: 50%;
+                margin-bottom:20px;
+                .img_inner{
+                    @include displayFlex();
+                    position: relative;
+                    height:250px; /*要與寬同高*/
+                    width: 100%;
+                    border:7px solid transparent;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    img{
+                        position: absolute;
+                        width:100%;
+                        filter:brightness(.5);
+                        transition: 0.5s;
+                        box-sizing: border-box;
+                    }
+                }
+                i{
+                    position: absolute;
+                    transform: translateX(8px);
+                    font-size:50px;
+                    color: rgba(255, 255, 255, 0.5);
+                    z-index: 99;
+                    transition: 0.5s;
+                }
+                &:hover{
+                    cursor: pointer;
+                    & i{
+                        color: rgba(255, 255, 255, 1);
+                    }
+                    & img{
+                        width:110%;
+                        filter:brightness(.8);
+                    }
+                }
+            }
+            p{
+                margin-bottom:20px;
+            }
+        }
+        
+    }
+}
+
+footer{
+    @include displayFlex(column);
+    width: 100vw;
+    padding:80px;
+    background: white;
+    color: #999999;
+    .icons{
+        @include displayFlex();
+        margin-bottom:20px;
+        i{
+            font-size: 35px;
+            margin:0 15px;
+        }
+    }
+}
+
+@media (max-width: "992px") {
+    main {
+        .userInf {
+            &:nth-child(2) {
+                .message {
+                    &:nth-child(1) {
+                        display: none !important;
+                    }
+                    &:nth-child(3) {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+}

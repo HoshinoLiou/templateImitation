@@ -1,0 +1,124 @@
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 55px;
+  background: #22313f;
+  color: #86898b;
+  font-size: 23px; }
+  nav i {
+    margin: 20px 0; }
+
+.bg {
+  position: fixed;
+  background: url("./image/banner.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh; }
+  .bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); }
+
+#page {
+  padding-left: 55px; }
+  #page header .slogan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    color: white; }
+    #page header .slogan input[type="button"] {
+      color: white;
+      background: none;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 3px;
+      padding: 10px 40px; }
+  #page main .whatNew {
+    background: #f1f1f1;
+    padding: 50px 0; }
+    #page main .whatNew .whatNew_title {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 0 30px;
+      width: 100%; }
+    #page main .whatNew .whatNew_pic {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      height: 230px;
+      overflow: hidden;
+      cursor: pointer; }
+      #page main .whatNew .whatNew_pic img {
+        position: absolute;
+        vertical-align: middle;
+        height: 100%;
+        transition: 0.3s; }
+      #page main .whatNew .whatNew_pic:hover img {
+        height: 110%; }
+    #page main .whatNew .whatNew_button {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px; }
+      #page main .whatNew .whatNew_button input[type="button"] {
+        border: none;
+        border-radius: 3px;
+        padding: 10px 40px;
+        color: white;
+        background: #19b5fe; }
+  #page footer .aboutMe {
+    padding: 50px;
+    background: #e6e6e6; }
+    #page footer .aboutMe h5,
+    #page footer .aboutMe p {
+      padding-bottom: 15px; }
+    #page footer .aboutMe i {
+      font-size: 25px;
+      margin-right: 15px;
+      color: #19b5fe; }
+  #page footer .connactMe {
+    padding: 50px;
+    background: #ececec; }
+    #page footer .connactMe h5 {
+      padding-bottom: 15px; }
+    #page footer .connactMe p {
+      padding: 20px 0 10px;
+      margin: 0; }
+    #page footer .connactMe input[type="text"] {
+      width: 100%; }
+    #page footer .connactMe textarea {
+      width: 100%; }
+    #page footer .connactMe input[type="button"] {
+      border: none;
+      border-radius: 3px;
+      padding: 10px 40px;
+      color: white;
+      background: #19b5fe;
+      margin-top: 20px; }
+  #page footer .footTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background: #f1f1f1;
+    font-size: 12px; }
+
+/*# sourceMappingURL=style.css.map */

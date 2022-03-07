@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>storywriter.tokyo</title>
+
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <div id="vueWrapper">
+
+        <header>
+            <div class="logo01">
+                <a href="https://storywriter.tokyo/">
+                    <img src="./images/logo_01.svg" alt="">
+                    <p class="tagline01">ストリートを愛するカルチャー・マガジン</p>
+                </a>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="content">
+                <div id="side" class="side">
+                    <div class="mainSwiper-before"></div>
+                    <div class="mainSwiper">
+                        <div id="mainSwiper_wrapper" class="mainSwiper_wrapper">
+                            <!-- 幻燈片內容 -->
+                            <div v-for="article in slideArticle" class="swiper-slide">
+                                <!-- 文章連結 -->
+                                <a :href="article['href']">
+                                    <!-- 圖片 -->
+                                    <div class="imgBox">
+                                        <img class="image1" :src="article['imgSrc']" alt="">
+                                        <img class="image2" :src="article['imgSrc']" alt="">
+                                    </div>
+                                    <!-- 文字內容 -->
+                                    <div class="contentBox">
+                                        <div class="title">
+                                            <em>{{article['title']}}</em>
+                                        </div>
+                                        <div class="date">{{article['update']}}</div>
+                                        <div class="tag">
+                                            <template v-for="(tag,index) in article['tag']">
+                                                <span v-if="index != 0"> / </span>
+                                                <span>
+                                                    <a :href="tagSrc[tag]">{{tag}}</a>
+                                                </span>
+                                            </template>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainSwiper-after"></div>
+                </div>
+                <div class="main">
+                    <div class="mainVessel">
+                        <!-- pickup 文章 -->
+                        <section class="pickup">
+                            <img class="pickUpImg" src="./images/ttl_pickup.svg" alt="">
+                            <div class="swiper-wrapper">
+                                <div v-for="article in pickupArticle" class="swiper">
+                                    <a :href="article['href']">
+                                        <!-- 圖片 -->
+                                        <div class="imgBox">
+                                            <img class="image1" :src="article['imgSrc']" alt="">
+                                            <img class="image2" :src="article['imgSrc']" alt="">
+                                        </div>
+                                        <!-- 文字內容 -->
+                                        <div class="contentBox">
+                                            <div class="title">
+                                                <em>{{article['title']}}</em>
+                                            </div>
+                                            <div class="date">{{article['update']}}</div>
+                                            <div class="tag">
+                                                <template v-for="(tag,index) in article['tag']">
+                                                    <span v-if="index != 0"> / </span>
+                                                    <span>
+                                                        <a :href="tagSrc[tag]">{{tag}}</a>
+                                                    </span>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- 文章列表 -->
+                        <section class="articleList">
+                            <div class="articleList-wrapper">
+                                <h2 class="articleList_title">
+                                    <em>New Articles</em> <span class="scrollLine01"></span>
+                                </h2>
+
+                                <div v-for="article in normalArticle" class="article">
+                                    <a :href="article['href']">
+                                        <div class="imgBox">
+                                            <img class="image1" :src="article['imgSrc']" alt="">
+                                            <img class="image2" :src="article['imgSrc']" alt="">
+                                            <div class="date">
+                                                {{article['update']}}
+                                            </div>
+                                        </div>
+                                        <div class="contentBox">
+                                            <div class="title">
+                                                <em>{{article['title']}}</em>
+                                            </div>
+                                            <div class="tag">
+                                                <template v-for="(tag,index) in article['tag']">
+                                                    <span v-if="index != 0"> / </span>
+                                                    <span>
+                                                        <a :href="tagSrc[tag]">{{tag}}</a>
+                                                    </span>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="loadMore">
+                                    <a href="/alllist/" class="buttonMod01 hovreActionButtonColorMoveOnce">
+                                        <span class="buttonMod01Text">LOAD MORE</span>
+                                        <span class="buttonMod01Image">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="31.467" height="6.169"
+                                                viewBox="0 0 31.467 6.169">
+                                                <path d="M-2273.8-4093.333h31.467l-6.169-6.169v4.5h-25.3Z"
+                                                    transform="translate(2273.8 4099.502)" fill="#333"></path>
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="logo01">
+                <img src="https://storywriter.tokyo/wp-content/themes/StoryWriter/img_cmn/logo_01.svg"
+                    alt="StoryWriter">
+            </div>
+            <p>ストリートを愛するカルチャー・マガジン</p>
+            <ul class="nav01">
+                <li><a href="/category/music/">MUSIC</a></li>
+                <li><a href="/category/book/">BOOK</a></li>
+                <li><a href="/category/movie/">MOVIE</a></li>
+                <li><a href="/category/art/">ART</a></li>
+                <li><a href="/category/others/">OTHERS</a></li>
+                <li><a href="/category/special/">SPECIAL</a></li>
+                <li><a href="/category/special/series-special/">SERIES</a></li>
+            </ul>
+
+            <div class="nav0202">
+                <ul class="nav02Ul02">
+                    <li class="nav02Items02 isTwitter">
+                        <a rel="nofollow" title="フォローする Twitter" href="https://twitter.com/storywriter_inc"
+                            target="_blank">Twitter</a>
+                    </li>
+                    <li class="nav02Items02 isFacebook">
+                        <a rel="nofollow" title="フォローする Facebook-official"
+                            href="https://www.facebook.com/%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BEsw-189046141668179/"
+                            target="_blank">facebook</a>
+                    </li>
+                </ul>
+                <p class="nav02Shop01"><a href="https://storywriter2.thebase.in/" target="_blank">Online Shop</a></p>
+            </div>
+
+            <p class="copyright01">Copyright © StoryWriter All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!--vue cdn-->
+    <script src="https://unpkg.com/vue@next"></script>
+    <script>
+
+        const vueApp = {
+            data() {
+                return {
+                    slideCount: 0,
+                    //* 投影片欄位的文章
+                    slideArticle: [
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/OHS3341-683x1024.jpg",
+                            title: "園子温が語るハリウッドデビュー作「思い出作りのために撮ったわけじゃない」",
+                            update: "2021.10.07",
+                            tag: ["Interview", "MOVIE"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/211208_maro_274-1-683x1024.jpg",
+                            title: "【ZOC連載インタビュー】Vol.5 巫まろ「直接会いに来てくれる人を一番大事にしたい」",
+                            update: "2022.01.18",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/DSC_7858-682x1024.jpg",
+                            title: "甲田まひるが語る、アングラとK-POPとヒップホップが融合した超ド級のデビュー作",
+                            update: "2021.12.09",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/211023_sw_165-1-683x1024.jpg",
+                            title: "竹内アンナとAFRO PARKERが語る、「永遠のために今を」歌ったコラボ楽曲",
+                            update: "2021.11.12",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/OHS3341-683x1024.jpg",
+                            title: "園子温が語るハリウッドデビュー作「思い出作りのために撮ったわけじゃない」",
+                            update: "2021.10.07",
+                            tag: ["Interview", "MOVIE"]
+                        },
+                    ],
+                    // 精選文章
+                    pickupArticle: [
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/OHS8003-681x1024.jpg",
+                            title: "男の娘アイドルユニットMMが振り返る、アイドルとして過ごした濃い1年間",
+                            update: "2021.10.03",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/OHS4823-683x1024.jpg",
+                            title: "【連載】東京初期衝動しーなちゃんの、ちゃっかりお見合い対談Vol.2 空気階段・鈴木もぐら（前編）",
+                            update: "2021.07.07",
+                            tag: ["MUSIC", "東京初期衝動しーなちゃんの、ちゃっかりお見合い対談", "連載"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/tommy-9210606-1024x768.jpeg",
+                            title: "ギターウルフセイジが語る、地元・島根で音楽フェスを開催し続ける理由",
+                            update: "2021.08.05",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/OHS2069-683x1024.jpg",
+                            title: "【INTERVIEW】ヤマトパンクスが語る人生、炎上や喧嘩をする理由",
+                            update: "2021.09.19",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/210819_076-1-683x1024.jpg",
+                            title: "カミヤサキと槙田紗子──アイドルを経験した現役振付師2人が語るアイドルダンスシーン",
+                            update: "2021.09.10",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                    ],
+                    //* 一般文章
+                    normalArticle: [
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/220120_gp_289-768x1152.jpg",
+                            title: "GANG PARADE再始動後初インタビュー、新メンバー3人と先輩2人で語るギャンパレの過去と未来",
+                            update: "2022.01.26",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/【A写】BiS-20220223タイトル未定_M.jpg",
+                            title: "BiS、東北6カ所をまわるツアー開催&中野サンプラザライヴ映像公開",
+                            update: "2022.01.26",
+                            tag: ["MUSIC", "NEWS"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/1-3.jpg",
+                            title: "【連載】本と生活と。Vol.40 きたやまようこ『ぼくのポチブルてき生活』",
+                            update: "2022.01.26",
+                            tag: ["未分類"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/yuyubanner-1536x858.jpg",
+                            title: "テラシマユウカの映画コラム Vol.136『さがす』",
+                            update: "2022.01.25",
+                            tag: ["MOVIE", "テラシマユウカの映画コラム－今日はさぼって映画をみにい", "連載"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/NZ79871.jpg",
+                            title: "【LIVE REPORT】GANG PARADE、再始動後初の東名阪ツアーファイナル「私たちがまた繋いでいきます」",
+                            update: "2022.01.22",
+                            tag: ["MUSIC", "REPORT"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/GANG-PARADEアーティスト写真-768x512.jpeg",
+                            title: "GANG PARADE、新体制初全国9都市10ヶ所を巡るツアー開催",
+                            update: "2022.01.21",
+                            tag: ["MUSIC", "NEWS"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/suzuchan-768x1024.jpg",
+                            title: "【連載】こころの本〜生きづらさの正体を探る Vol.17『すずちゃんののうみそ』",
+                            update: "2022.01.21",
+                            tag: ["BOOKS", "こころの本〜生きづらさの正体を探る、産業カウンセラー手島将彦のオススメ本"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/NZ66698-2048x1365.jpg",
+                            title: "【LIVE REPORT】BiS、5人体制で巡る新春ツアー東京公演で2022年の幕開け",
+                            update: "2022.01.19",
+                            tag: ["MUSIC", "REPORT"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/01_AYAMO_20220101_winter_TOP_sashikae_2.jpeg",
+                            title: "AYAMOJAMMED 2021 WINTER Vol.27",
+                            update: "2022.01.19",
+                            tag: ["ART", "AYAMOJAMMED"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/1-2.jpg",
+                            title: "【連載】本と生活と。Vol.39 寺山修司『両手いっぱいの言葉』",
+                            update: "2022.01.19",
+                            tag: ["本と生活と。"]
+                        },
+                        {
+                            href: "#",
+                            imgSrc: "./images/article/211208_maro_274-1-scaled.jpg",
+                            title: "【ZOC連載インタビュー】Vol.5 巫まろ「直接会いに来てくれる人を一番大事にしたい」",
+                            update: "2022.01.18",
+                            tag: ["Interview", "MUSIC"]
+                        },
+                    ],
+                    tagSrc: {
+                        Interview: "#",
+                        MOVIE: "#",
+                        MUSIC: "#"
+                    }
+                }
+            },
+            beforeCreated() { },
+            created() { },
+            beforeMounted() { },
+            mounted() {
+
+
+                //* 幻燈片效果
+                setInterval(() => {
+                    let mainSwiper_wrapper = document.getElementById("mainSwiper_wrapper");
+
+                    this.slideCount++;
+                    console.log(this.slideCount);
+
+                    mainSwiper_wrapper.style.transition = "0.5s";
+                    mainSwiper_wrapper.style.transitionDelay = `0.1s`;
+                    mainSwiper_wrapper.style.transform = `translateY(${this.slideCount * -100}%)`;
+
+                    let side = document.getElementById("side");
+                    side.classList.add("animation");
+                    setTimeout(() => {
+                        side.classList.remove("animation");
+                    }, 500)
+
+                    //* 如果已經達到幻燈片數量的上限
+                    //* 回到 0
+                    if (this.slideCount >= this.slideArticle.length - 1) {
+                        this.slideCount = 0;
+                        setTimeout(() => {
+                            mainSwiper_wrapper.style.transition = "0s";
+                            mainSwiper_wrapper.style.transform = "translateY(0%)";
+                        }, 1000)
+                    }
+                }, 3000)
+            }
+        }
+
+        let vm = Vue.createApp(vueApp);
+        vm.mount("#vueWrapper");
+
+    </script>
+
+</body>
+
+</html>

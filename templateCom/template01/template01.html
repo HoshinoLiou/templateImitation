@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template01</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <section class="header_section">
+                <h1>Full Motion</h1>
+                <p>A responsive video gallery template with a functional lightbox
+                    designed by Templated and released under the Creative Commons License.</p>
+            </section>
+        </header>
+        <main>
+            <div class="squareBx">
+                <square v-for="(square_data, key) in square_data" v-bind:img_url="square_data.img_url"
+                    v-bind:title="square_data.title" v-bind:content="square_data.content"
+                    v-bind:button_value="square_data.button_value" v-bind:num="key%3"></square>
+            </div>
+        </main>
+        <footer>
+            <section class="footer_section">
+                <h1>Etiam veroeros lorem</h1>
+                <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt
+                    nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit,
+                    consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor
+                    in diam feugiat venenatis.</p>
+                <div class="section_icon">
+                    <p>
+                        <i class="fa fa-twitter"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-facebook"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-instagram"></i>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope-o"></i>
+                    </p>
+                </div>
+                <p><small>© Untitled. Design: TEMPLATED. Images: Unsplash. Videos: Coverr.</small>
+                </p>
+
+            </section>
+        </footer>
+    </div>
+
+    <!-- vue cdn -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+
+        const square = {
+            props: {
+                img_url: {
+                    type: String,
+                    default: 'NoData'
+                },
+                title: {
+                    type: String,
+                    default: 'NoData'
+                },
+                content: {
+                    type: String,
+                    default: 'NoData'
+                },
+                button_value: {
+                    type: String,
+                    default: 'NoData'
+                },
+                num: {
+                    type: String,
+                    default: '1'
+                }
+            },
+            template: `
+            <section class="square">
+                <figure class="square_img">
+                    <img v-bind:src="img_url" alt="">
+                </figure>
+                <div class="square_content">
+                    <h1>{{title}}</h1>
+                    <p>{{content}}</p>
+                    <input type="button" v-bind:value="button_value" v-bind:class="'buttonColor'+num">
+                </div>
+            </section>
+            `
+        }
+
+
+        let app = {
+            data() {
+                return {
+                    square_data: [
+                        {
+                            img_url: "img/pic01.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch",
+                        },
+                        {
+                            img_url: "img/pic02.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch"
+                        },
+                        {
+                            img_url: "img/pic03.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch"
+                        }, {
+                            img_url: "img/pic04.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch"
+                        },
+                        {
+                            img_url: "img/pic05.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch"
+                        },
+                        {
+                            img_url: "img/pic06.jpg",
+                            title: "Nascetur nunc varius commodo",
+                            content: "Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.",
+                            button_value: "Watch"
+                        }
+                    ]
+                }
+            },
+            methods: {
+
+            },
+            components: {
+                square: square
+            }
+        }
+
+        Vue.createApp(app).mount('#app');
+
+    </script>
+</body>
+
+</html>

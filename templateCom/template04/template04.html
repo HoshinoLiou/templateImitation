@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template04</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+
+        <div class="bg"></div>
+
+        <!-- 選單 -->
+        <nav class="navHeader">
+            <section class="nav">
+                <div class="logo col-6">
+                    Hielo by TEMPLATED
+                </div>
+                <div class="listBurget col-6" v-on:click="navList=true">
+                    <i class="fa fa-align-justify"></i>Menu
+                </div>
+            </section>
+        </nav>
+        <nav class="navList">
+            <div class="navList_close">
+                <i class=" menu_times_x fa fa-times" v-on:click="navList=false"></i>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Others</li>
+            </ul>
+        </nav>
+
+        <header>
+            <section>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="slideBox col-12">
+                            <div class="slideBox_content">
+                                <div class="slideBox_content_item">
+                                    <div class="bg"></div>
+                                    <img src="./image/slide01.jpg" alt="">
+                                    <div class="title">
+                                        <p>A free responsive web site template by TEMPLATED</p>
+                                        <h1>Hielo</h1>
+                                    </div>
+                                </div>
+                                <div class="slideBox_content_item">
+                                    <img src="./image/slide02.jpg" alt="">
+                                    <div class="title">
+                                        <p>Lorem ipsum dolor sit amet nullam feugiat</p>
+                                        <h1>Magna etiam</h1>
+                                    </div>
+                                </div>
+                                <div class="slideBox_content_item">
+                                    <img src="./image/slide03.jpg" alt="">
+                                    <div class="title">
+                                        <p>Sed cursus aliuam veroeros lorem ipsum nullam</p>
+                                        <h1>Tempus dolor</h1>
+                                    </div>
+                                </div>
+                                <div class="slideBox_content_item">
+                                    <img src="./image/slide04.jpg" alt="">
+                                    <div class="title">
+                                        <p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
+                                        <h1>Etiam feugiat</h1>
+                                    </div>
+                                </div>
+                                <div class="slideBox_content_item">
+                                    <img src="./image/slide05.jpg" alt="">
+                                    <div class="title">
+                                        <p>Ipsum dolor sed magna veroeros lorem ipsum</p>
+                                        <h1>Lorem adipiscing</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slideBox_selecter">
+                                <label>
+                                    <input type="radio" name="slideBoxSelecter" v-model="slideBoxSelecter" value="0">
+                                    <div class="color"></div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="slideBoxSelecter" v-model="slideBoxSelecter" value="1">
+                                    <div class="color"></div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="slideBoxSelecter" v-model="slideBoxSelecter" value="2">
+                                    <div class="color"></div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="slideBoxSelecter" v-model="slideBoxSelecter" value="3">
+                                    <div class="color"></div>
+                                </label>
+                                <label>
+                                    <input type="radio" name="slideBoxSelecter" v-model="slideBoxSelecter" value="4">
+                                    <div class="color"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="main_introduction">
+                <div class="container">
+                    <div class="row">
+                        <!-- 1 -->
+                        <div class="introduction_box col-lg-6">
+                            <div class="img">
+                                <img src="./image/pic02.jpg" alt="">
+                            </div>
+                            <div class="font">
+                                <div class="title">
+                                    <p>MAECENAS SAPIEN FEUGIAT EX PURUS</p>
+                                    <h3>Lorem ipsum dolor</h3>
+                                </div>
+                                <div class="content">
+                                    <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum
+                                        sit
+                                        amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas
+                                        feugiat
+                                        ex purus, quis volutpat lacus placerat malesuada.</p>
+                                </div>
+                                <div class="button">
+                                    <input type="button" value="LEARN MORE">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 2 -->
+                        <div class="introduction_box col-lg-6">
+                            <div class="img">
+                                <img src="./image/pic03.jpg" alt="">
+                            </div>
+                            <div class="font">
+                                <div class="title">
+                                    <p>MATTIS ELEMENTUM SAPIEN PRETIUM TELLUS</p>
+                                    <h3>Vestibulum sit amet</h3>
+                                </div>
+                                <div class="content">
+                                    <p>Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum
+                                        sit
+                                        amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas
+                                        feugiat
+                                        ex purus, quis volutpat lacus placerat malesuada.</p>
+                                </div>
+                                <div class="button">
+                                    <input type="button" value="LEARN MORE">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="main_message fontWhite">
+                <p>NAM VEL ANTE SIT AMET LIBERO SCELERISQUE FACILISIS ELEIFEND VITAE URNA</p>
+                <h3>Morbi maximus justo</h3>
+            </section>
+
+            <section class="main_introduction">
+
+                <section class="main_message">
+                    <p>NAM VEL ANTE SIT AMET LIBERO SCELERISQUE FACILISIS ELEIFEND VITAE URNA</p>
+                    <h3>Morbi maximus justo</h3>
+                </section>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="introduction_pic col-lg-6">
+                            <img src="./image/pic01.jpg" alt="">
+                        </div>
+                        <div class="introduction_pic col-lg-6">
+                            <img src="./image/pic02.jpg" alt="">
+                        </div>
+                        <div class="introduction_pic col-lg-6">
+                            <img src="./image/pic03.jpg" alt="">
+                        </div>
+                        <div class="introduction_pic col-lg-6">
+                            <img src="./image/pic04.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="othersIcon">
+                <i class="fa fa-twitter"></i>
+                <i class="fa fa-facebook"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-envelope-o"></i>
+            </section>
+            <section class="untitled">
+                <p>© Untitled. All rights reserved.</p>
+            </section>
+        </footer>
+    </div>
+
+    <!-- vue cdn -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+
+        let app = {
+            data() {
+                return {
+                    navList: false,
+                    slideBoxSelecter: 0
+                }
+            },
+            methods: {
+
+            },
+            watch: {
+                //選單動畫
+                navList: function (e) {
+                    let navList = document.getElementsByClassName("navList");
+                    if (e) {
+                        navList[0].style.width = "50%";
+                    }
+                    else {
+                        navList[0].style.width = "0%";
+                    }
+                },
+                //幻燈片動畫
+                slideBoxSelecter: function (e) {
+                    let slideBox_content = document.getElementsByClassName("slideBox_content");
+                    slideBox_content[0].style.transform = "translateX(-" + e * 100 + "vw)";
+                }
+            },
+            components: {
+
+            }
+        }
+
+        Vue.createApp(app).mount('#app');
+
+
+        window.addEventListener("scroll", function (e) {
+            let value = window.scrollY;
+            if(value >= 550){
+                let navHeader = document.getElementsByClassName('navHeader');
+                navHeader[0].style.position = "fixed";
+                navHeader[0].style.background = "rgba(0,0,0,1)";
+            }
+            else if(value == 0){
+                let navHeader = document.getElementsByClassName('navHeader');
+                navHeader[0].style.position = "absolute";
+                navHeader[0].style.background = "rgba(0,0,0,0)";
+            }
+        })
+
+    </script>
+</body>
+
+</html>

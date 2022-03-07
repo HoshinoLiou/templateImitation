@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TemplateCopy</title>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --bgColor: #3a3a3a;
+            --fColor: #eeeeee;
+
+            /* --bgColor: #eeeeee;
+            --fColor: #3a3a3a; */
+        }
+
+        body {
+            background: var(--bgColor);
+            color: var(--fColor);
+            padding: 50px 0;
+        }
+
+        hr {
+            background: var(--fColor);
+            margin: 30px 5% 60px;
+        }
+
+        .title {
+            margin-bottom: 50px;
+            /* color: rgb(197, 33, 33); */
+        }
+
+        .square {
+            margin-bottom: 30px;
+        }
+
+        .square .square_img {
+            width: 100%;
+            border: 1px solid var(--fColor);
+            margin-bottom: 10px;
+        }
+
+        .square_img2 {
+            /* border: 1px solid var(--fColor); */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .square .square_img img {
+            width: 100%;
+        }
+
+        .square_img2 img {
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .square_img2:hover img {
+            /* width: 100%; */
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .aButtonsBox {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            padding: 0px;
+        }
+
+        .aButtonsBox_inner {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .aButton {
+            display: inline-block;
+            width: 100%;
+            border: 1px solid var(--fColor);
+            padding: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            background: #2c2c2c;
+            color: var(--fColor);
+        }
+
+        a.aButton:hover {
+            background: var(--fColor);
+            color: var(--bgColor);
+            text-decoration: none;
+        }
+
+        .vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            /* text-orientation: upright; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <hr> -->
+
+    <div class="container">
+        <h4 class="title">MUUUUU.ORG</h4>
+        <div class="row">
+            <div class="col-1">
+                <p class="vertical">storywriter.tokyo</p>
+            </div>
+            <div class="col-11 col-md-9 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/storyWriterTokyo_main.png" alt="">
+                </div>
+                <a target="_blank" class="aButton" href="./MuuuuuOrg/storywriter.tokyo/index.html">DEMO</a>
+            </div>
+            <div class="col-2  d-none d-md-block square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/storyWriterTokyo_ixr.png" alt="">
+                    <p></p>
+                </div>
+            </div>
+
+
+            <div class="col-1">
+                <p class="vertical">holo.jp</p>
+            </div>
+            <div class="col-2 d-none d-md-block square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/holoJp_ixr.png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-11 col-md-9 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/holoJp_main.png" alt="">
+                </div>
+                <a target="_blank" class="aButton" href="./MuuuuuOrg/holo.jp/index.html">DEMO</a>
+            </div>
+
+            <!-- <div class="col-1">
+                <p class="vertical">holo.jp</p>
+            </div>
+            <div class="col-2 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo(ixr).png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-9 col-md-9 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo.png" alt="">
+                    <p></p>
+                </div>
+            </div> -->
+
+
+            <!-- 第一版 -->
+            <!-- <div class="col-2 col-md-2 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo(ixr).png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-6 col-md-6 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo.png" alt="">
+                    <p></p>
+                </div>
+                <div style="margin:5px;"></div>
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo.png" alt="">
+                    <p></p>
+                </div>
+            </div>
+            <div class="col-2 col-md-2 square">
+                <div class="square_img2">
+                    <img src="MuuuuuOrg/images/httpsstorywriter.tokyo(ixr).png" alt="">
+                    <p></p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h4 class="title">Templates.com</h4>
+        <div class="row">
+            <div class="col-4 col-md-4 square">
+                <div class="square_img">
+                    <img src="templateCom/images/template01.png" alt="">
+                </div>
+                <div class="square_img">
+                    <img src="templateCom/images/template05.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-4 square">
+                <div class="square_img">
+                    <img src="templateCom/images/template09.png" alt="">
+                </div>
+                <div class="square_img">
+                    <img src="templateCom/images/template07.png" alt="">
+                </div>
+            </div>
+            <div class="col-4 col-md-4 aButtonsBox">
+                <div class="aButtonsBox_inner">
+                    <a target="_blank" class="aButton" href="./templateCom/template01/template01.html">Template01</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template02/template02.html">Template02</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template03/template03.html">Template03</a>
+
+                    <a target="_blank" class="aButton" href="./templateCom/template04/template04.html">Template04</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template05/template05.html">Template05</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template06/template06.html">Template06</a>
+
+                    <a target="_blank" class="aButton" href="./templateCom/template07/template07.html">Template07</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template08/template08.html">Template08</a>
+                    <a target="_blank" class="aButton" href="./templateCom/template09/template09.html">Template09</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

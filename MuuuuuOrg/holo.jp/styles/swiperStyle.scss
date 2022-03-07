@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mask {
+    object-fit: cover;
+    //-webkit-mask-image: url(../images/mask_sp.png);
+    mask-image: url(../images/mask_sp.png);
+    //-webkit-mask-size: 260px 212px;
+
+    // object-fit: cover;
+    -webkit-mask-image: url(https://cdn.shopify.com/s/files/1/0577/3062/9806/files/mask.png?v=1636005867);
+    // mask-image: url(https://cdn.shopify.com/s/files/1/0577/3062/9806/files/mask.png?v=1636005867);
+    -webkit-mask-repeat: round;
+
+    height: 200px;
+    width: 250px;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.square {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

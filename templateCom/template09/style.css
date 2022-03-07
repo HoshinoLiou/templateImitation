@@ -1,0 +1,116 @@
+#app {
+  background: url("./image/bg.jpg");
+  background-size: cover;
+  overflow-x: hidden; }
+
+header .header_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 50px 0; }
+  header .header_section .avatar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin-bottom: 25px; }
+    header .header_section .avatar img {
+      padding: 10px;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2); }
+  header .header_section .profile {
+    width: 80%;
+    max-width: 500px;
+    margin-bottom: 15px; }
+  header .header_section .icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px; }
+    header .header_section .icon i {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      padding: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      width: 50px;
+      height: 50px;
+      margin: 0 5px;
+      box-sizing: border-box;
+      transition: 0.3s; }
+      header .header_section .icon i:hover {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.4); }
+
+main .main_section {
+  margin-bottom: 50px; }
+  main .main_section .picBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: 0.3s; }
+    main .main_section .picBox .picBox_img {
+      width: 100%;
+      border: rgba(255, 255, 255, 0.4); }
+      main .main_section .picBox .picBox_img img {
+        width: 100%; }
+    main .main_section .picBox .picBox_inf {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 20px;
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+      border-right: 1px solid rgba(255, 255, 255, 0.4);
+      border-radius: 0 0 5px 5px;
+      box-sizing: border-box;
+      transition: 0.3s; }
+      main .main_section .picBox .picBox_inf p {
+        margin: 0;
+        padding: 0; }
+    main .main_section .picBox:hover {
+      cursor: pointer;
+      box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5); }
+      main .main_section .picBox:hover .picBox_inf {
+        background: rgba(255, 255, 255, 0.4); }
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+  footer .footer_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    width: 90%;
+    max-width: 600px;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.4); }
+
+/*# sourceMappingURL=style.css.map */

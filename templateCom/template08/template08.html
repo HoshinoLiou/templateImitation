@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template08</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <header v-bind:class="{headerSmall: !headerLorS}">
+            <div class="header_bg"></div>
+            <section class=header_section>
+                <div class="header_section_content">
+                    <h1>Radius</h1>
+                    <p>A fully responsive masonry-style portfolio template.</p>
+                    <input type="button" value="Let's Go" v-on:click="change_headerLorS(false)">
+                </div>
+                <div class="header_section_icon" v-on:click="change_headerLorS(true)">
+                    <i class="headerBtn fa fa-home" style="display: block;"></i>
+                </div>
+            </section>
+        </header>
+
+        <main>
+            <section class="main_section">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic01.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic02.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic06.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic05.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic09.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic12.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic13.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic14.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic03.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic04.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic08.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic07.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic11.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic10.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="imgBox">
+                                                <img src="./image/pic15.jpg" alt="">
+                                            </div>
+                                            <div class="imgBox">
+                                                <img src="./image/pic16.jpg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footerShower" v-on:click="change_footerLorS()">
+                <i class="fa fa-info-circle"></i>
+            </div>
+            <section class="footer_section">
+                <div class="inf">
+                    <h3>Vestibulum hendrerit tortor id gravida</h3>
+                    <p>In tempor porttitor nisl non elementum. Nulla ipsum ipsum, feugiat vitae vehicula vitae,
+                        imperdiet sed risus. Fusce sed dictum neque, id auctor felis. Praesent luctus sagittis viverra.
+                        Nulla erat nibh, fermentum quis enim ac, ultrices euismod augue. Proin ligula nibh, pretium at
+                        enim eget, tempor feugiat nulla.</p>
+                </div>
+                <div class="follow">
+                    <h3>Follow me</h3>
+                    <div class="icon">
+                        <i class="fa fa-twitter"></i>
+                        <i class="fa fa-facebook"></i>
+                        <i class="fa fa-instagram"></i>
+                        <i class="fa fa-dribbble"></i>
+                    </div>
+                    <p>© Untitled. Design: TEMPLATED. Images: Unsplash.</p>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+
+    <!-- vue cdn -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+
+        let app = {
+            data() {
+                return {
+                    headerLorS: true,
+                    footerLorS: false,
+                }
+            },
+            methods: {
+                change_headerLorS: function (TorF) {
+                    this.headerLorS = TorF;
+                },
+                change_footerLorS: function () {
+                    this.footerLorS = !this.footerLorS;
+                    if (this.footerLorS) {
+                        let footer = document.getElementsByTagName("footer");
+                        footer[0].style.transform = "translateY(0%)";
+                    }
+                    else {
+                        let footer = document.getElementsByTagName("footer");
+                        footer[0].style.transform = "translateY(100%)";
+                    }
+                }
+            },
+            watch: {
+
+            },
+            components: {
+
+            }
+        }
+
+        Vue.createApp(app).mount('#app');
+
+
+
+    </script>
+</body>
+
+</html>

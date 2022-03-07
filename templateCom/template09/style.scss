@@ -1,0 +1,123 @@
+@mixin displayFlex($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
+
+$borderColor: rgba(255, 255, 255, 0.4);
+$backgroundColor: rgba(255, 255, 255, 0.2);
+
+#app {
+    background: url("./image/bg.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+header {
+    .header_section {
+        @include displayFlex(column);
+        color: white;
+        padding: 50px 0;
+        .avatar {
+            @include displayFlex();
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border: 1px solid $borderColor;
+            border-radius: 50%;
+            margin-bottom:25px;
+            img {
+                padding: 10px;
+                box-sizing: border-box;
+                width: 100%;
+                border-radius: 50%;
+                background: $backgroundColor;
+            }
+        }
+        .profile {
+            width: 80%;
+            max-width: 500px;
+            margin-bottom:15px;
+        }
+        .icon {
+            @include displayFlex();
+            margin-bottom:25px;
+            i {
+                @include displayFlex();
+                font-size: 20px;
+                padding: 10px;
+                border: 1px solid $borderColor;
+                border-radius: 50%;
+                background: $backgroundColor;
+                width: 50px;
+                height: 50px;
+                margin: 0 5px;
+                box-sizing: border-box;
+                transition: 0.3s;
+                &:hover{
+                    cursor: pointer;
+                    background: $borderColor;
+                }
+            }
+        }
+    }
+}
+
+main {
+    .main_section {
+        margin-bottom: 50px;
+        .picBox {
+            @include displayFlex(column);
+            width: 100%;
+            background: $backgroundColor;
+            color: white;
+            margin-bottom:30px;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: 0.3s;
+            .picBox_img {
+                width: 100%;
+                border: $borderColor;
+                img {
+                    width: 100%;
+                }
+            }
+            .picBox_inf {
+                @include displayFlex();
+                width:100%;
+                padding:20px;
+                border-left: 1px solid $borderColor;
+                border-bottom: 1px solid $borderColor;
+                border-right: 1px solid $borderColor;
+                border-radius: 0 0 5px 5px;
+                box-sizing: border-box;
+                transition: 0.3s;
+                p{
+                    margin:0;
+                    padding:0;
+                }
+            }
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0px 0px 20px rgba(255,0,0,0.5);
+                .picBox_inf{
+                    background: $borderColor;
+                }
+            }
+        }
+    }
+}
+
+
+footer{
+    @include displayFlex();
+    .footer_section{
+        @include displayFlex();
+        padding:50px 0;
+        width:90%;
+        max-width:600px;
+        color: white;
+        border-top:1px solid $borderColor;
+    }
+}

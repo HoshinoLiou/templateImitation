@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template02</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- bootstrap cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+        integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div id="app">
+
+        <!-- 選單 -->
+        <nav class="navHeader">
+            <section class="nav">
+                <div class="logo col-6">
+                    industrious
+                </div>
+                <div class="listBurget col-6" v-on:click="navList=true">
+                    <i class="fa fa-align-justify"></i>Menu
+                </div>
+            </section>
+        </nav>
+
+        <nav class="navList">
+            <div class="navList_close">
+                <i class=" menu_times_x fa fa-times" v-on:click="navList=false"></i>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Others</li>
+            </ul>
+        </nav>
+
+        <!-- 標語 -->
+        <header>
+            <section class="header_section container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-1"> </div>
+                    <div class="header_section_slogan col-lg-6 col-md-10">
+                        <h1>INDUSTRIOUS</h1>
+                        <p>A responsive business oriented template with a video background designed by TEMPLATED and
+                            released
+                            under the Creative Commons License.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-1"> </div>
+                </div>
+            </section>
+        </header>
+
+        <!-- 內容 -->
+        <main>
+            <!-- 部分1 -->
+            <section class="main_section container">
+                <div class="row">
+                    <div class="col-1"> </div>
+                    <div class="main_section_title col-10">
+                        <h2>SEM TURPIS AMET SEMPER</h2>
+                        <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer
+                            lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+                    </div>
+                    <div class="col-1"> </div>
+                </div>
+            </section>
+            <section class="main_section container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-address-card-o"></i>
+                            <h5>FEUGIAT CONSEQUAT</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-files-o"></i>
+                            <h5>ANTE SEM INTEGER</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-floppy-o"></i>
+                            <h5>IPSUM CONSEQUAT</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-line-chart"></i>
+                            <h5>INTERDUM GRAVIDA</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-paper-plane-o"></i>
+                            <h5>FAUCIBUS CONSEQUAT</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <i class="fa fa-qrcode"></i>
+                            <h5>ACCUMSAN VIVERRA</h5>
+                            <p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem
+                                non
+                                mi integer non faucibus.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 部分2 -->
+            <section class="main_section_sp container-fluid">
+                <div class="row red">
+                    <div class="col-1"> </div>
+                    <div class="main_section_title_sp col-10">
+                        <h2>CURABITUR ULLAMCORPER ULTRICIES</h2>
+                        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                            integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia
+                            sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum
+                            ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
+                            adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac
+                            gravida.</p>
+                    </div>
+                    <div class="col-1"> </div>
+                </div>
+            </section>
+            <!-- 部分3 -->
+            <section class="main_section container">
+                <div class="row">
+                    <div class="col-1"> </div>
+                    <div class="main_section_title col-10">
+                        <h2>FAUCIBUS CONSEQUAT LOREM</h2>
+                        <p>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer
+                            lobortis commodo ornare aliquet accumsan erat tempus amet porttitor.</p>
+                    </div>
+                    <div class="col-1"> </div>
+                </div>
+            </section>
+            <section class="main_section container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <div>
+                                <p class="message">Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida
+                                    odio porttitor
+                                    sem non mi integer non faucibus.</p>
+                            </div>
+                            <div class="square_user">
+                                <img src="./image/pic01.jpg" alt="">
+                                <p>- Jane Doe CEO - ABC Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <div>
+                                <p class="message">Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida
+                                    odio porttitor
+                                    sem non mi integer non faucibus.</p>
+                            </div>
+                            <div class="square_user">
+                                <img src="./image/pic02.jpg" alt="">
+                                <p>- Jane Doe CEO - ABC Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="square">
+                            <div>
+                                <p class="message">Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida
+                                    odio porttitor
+                                    sem non mi integer non faucibus.</p>
+                            </div>
+                            <div class="square_user">
+                                <img src="./image/pic03.jpg" alt="">
+                                <p>- Jane Doe CEO - ABC Inc.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="footer_section container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12">
+                        <h5>ACCUMSAN MONTES VIVERRA</h5>
+                        <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi
+                            integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia
+                            sapien lorem accumsan varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum
+                            ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac
+                            adipiscing sed feugiat eu faucibus. Integer ac sed amet praesent. Nunc lacinia ante nunc ac
+                            gravida.</p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer_list">
+                        <h5>SEM TURPIS AMET SEMPER</h5>
+                        <a href="#" class="underline">Dolor pulvinar sed etiam.</a>
+                        <a href="#" class="underline">Etiam vel lorem sed amet.</a>
+                        <a href="#" class="underline">Felis enim feugiat viverra.</a>
+                        <a href="#">Dolor pulvinar magna etiam.</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer_list">
+                        <h5>MAGNA SED IPSUM</h5>
+                        <a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+                        <a href="#"><i class="fa fa-facebook"></i>Facebook</a>
+                        <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+                        <a href="#"><i class="fa fa-github"></i>Github</a>
+                    </div>
+                </div>
+            </section>
+        </footer>
+    </div>
+
+    <!-- vue cdn -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+    <script>
+
+        let app = {
+            data() {
+                return {
+                    navList: false
+                }
+            },
+            methods: {
+
+            },
+            watch: {
+                navList:function(e){
+                    let navList = document.getElementsByClassName("navList");
+                    if(e){
+                        navList[0].style.width = "50%";
+                    }
+                    else{
+                        navList[0].style.width = "0%";
+                    }
+                }
+            },
+            components: {
+
+            }
+        }
+
+        Vue.createApp(app).mount('#app')
+
+    </script>
+</body>
+
+</html>
